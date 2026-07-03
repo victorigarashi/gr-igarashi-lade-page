@@ -77,7 +77,7 @@ a {
 }
 
 .brand img {
-  width: 176px;
+  width: 204px;
   height: auto;
   object-fit: contain;
   padding: 9px 14px;
@@ -268,7 +268,7 @@ a {
 }
 
 .hero-logo {
-  width: min(360px, 82vw);
+  width: min(420px, 84vw);
   height: auto;
   object-fit: contain;
   margin-bottom: 72px;
