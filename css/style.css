@@ -8,7 +8,7 @@
   --red-dark: #aa0710;
   --green: #25d366;
   --green-dark: #128c4a;
-  --green-deep: #082516;
+  --green-deep: #123822;
   --line: rgba(255, 255, 255, 0.1);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
   --radius: 8px;
@@ -82,8 +82,7 @@ a {
   object-fit: contain;
   padding: 9px 14px;
   border-radius: var(--radius);
-  background: rgba(0, 0, 0, 0.52);
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.65));
+  background: #050505;
 }
 
 .nav-menu {
@@ -232,7 +231,7 @@ a {
   padding: calc(var(--header) + 64px) 0 88px;
   background:
     linear-gradient(90deg, rgba(7, 7, 7, 0.98) 0%, rgba(7, 7, 7, 0.94) 43%, rgba(7, 7, 7, 0.78) 66%, rgba(7, 7, 7, 0.62) 100%),
-    linear-gradient(105deg, rgba(227, 6, 19, 0.16) 0%, rgba(227, 6, 19, 0.05) 34%, transparent 58%),
+    linear-gradient(105deg, rgba(227, 6, 19, 0.08) 0%, rgba(227, 6, 19, 0.03) 34%, transparent 58%),
     #090909;
 }
 
@@ -274,8 +273,7 @@ a {
   margin-bottom: 72px;
   padding: 18px 22px;
   border-radius: var(--radius);
-  background: rgba(0, 0, 0, 0.42);
-  filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.78));
+  background: #050505;
 }
 
 .pill {
@@ -284,10 +282,10 @@ a {
   min-height: 36px;
   padding: 0 22px;
   margin-bottom: 24px;
-  border: 1px solid rgba(227, 6, 19, 0.38);
+  border: 1px solid var(--red);
   border-radius: 999px;
-  background: rgba(227, 6, 19, 0.13);
-  color: #ff4f58;
+  background: var(--red);
+  color: #fff;
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.14em;
@@ -433,8 +431,7 @@ h2 {
 
 .visual-corolla {
   background:
-    radial-gradient(circle at 55% 45%, rgba(255, 255, 255, 0.18), transparent 30%),
-    linear-gradient(135deg, #272727, #070707);
+    linear-gradient(135deg, #202020, #070707);
 }
 
 .line-visual::before {
@@ -463,8 +460,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: min(70%, 420px);
-  opacity: 0.42;
-  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.7));
+  opacity: 0.58;
   transform: scale(1.06);
   transition: transform 0.35s ease;
 }
@@ -510,7 +506,7 @@ h2 {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.04);
+  background: #181819;
 }
 
 .feature-columns strong {
@@ -566,15 +562,13 @@ li::marker {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background:
-    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.12), transparent 30%),
-    #141415;
+  background: #141415;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .part-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(227, 6, 19, 0.42);
+  border-color: var(--red);
 }
 
 .part-card::before {
@@ -595,8 +589,8 @@ li::marker {
   padding: 5px 10px;
   margin-bottom: 12px;
   border-radius: 999px;
-  background: rgba(227, 6, 19, 0.18);
-  color: #ff6169;
+  background: var(--red);
+  color: #fff;
   font-size: 0.72rem;
   font-weight: 900;
 }
@@ -619,10 +613,10 @@ li::marker {
   justify-content: center;
   gap: 9px;
   padding: 10px 12px;
-  border: 1px solid rgba(37, 211, 102, 0.34);
+  border: 1px solid var(--green);
   border-radius: 0 0 var(--radius) var(--radius);
-  background: var(--green-deep);
-  color: #00f06a;
+  background: var(--green);
+  color: #fff;
   font-size: 0.83rem;
   font-weight: 900;
   text-align: center;
@@ -640,8 +634,8 @@ li::marker {
 
 .part-card a:hover,
 .part-card a:focus-visible {
-  background: #0c331f;
-  border-color: rgba(37, 211, 102, 0.48);
+  background: var(--green-dark);
+  border-color: var(--green-dark);
   transform: translateY(-1px);
 }
 
@@ -661,13 +655,13 @@ li::marker {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  background: #171718;
 }
 
 .step-card span {
   display: block;
   margin-bottom: 30px;
-  color: rgba(227, 6, 19, 0.5);
+  color: var(--red);
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
@@ -695,8 +689,7 @@ li::marker {
 .about-image img {
   padding: 20px;
   border-radius: var(--radius);
-  background: rgba(0, 0, 0, 0.44);
-  filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.7));
+  background: #050505;
 }
 
 .about-image span {
@@ -749,7 +742,6 @@ li::marker {
   overflow: hidden;
   border-radius: var(--radius);
   background:
-    radial-gradient(circle at 86% 22%, rgba(255, 255, 255, 0.2), transparent 28%),
     linear-gradient(135deg, var(--red), var(--red-dark));
 }
 
@@ -766,8 +758,7 @@ li::marker {
 .location {
   padding-top: 94px;
   background:
-    linear-gradient(180deg, #050505, #0b0b0c 45%, #050505),
-    radial-gradient(circle at 20% 20%, rgba(227, 6, 19, 0.12), transparent 30%);
+    linear-gradient(180deg, #050505, #0b0b0c 45%, #050505);
 }
 
 .location-heading {
@@ -799,7 +790,7 @@ li::marker {
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.045);
+  background: #171718;
 }
 
 .location-card h3 {
@@ -814,7 +805,7 @@ li::marker {
 }
 
 .location-card a {
-  color: var(--green);
+  color: #fff;
   font-weight: 900;
 }
 
@@ -824,8 +815,8 @@ li::marker {
   width: 50px;
   height: 50px;
   border-radius: 999px;
-  background: rgba(227, 6, 19, 0.16);
-  color: var(--red);
+  background: var(--red);
+  color: #fff;
 }
 
 .location-icon::before {
@@ -902,8 +893,7 @@ li::marker {
   object-fit: contain;
   padding: 8px 12px;
   border-radius: var(--radius);
-  background: rgba(0, 0, 0, 0.46);
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+  background: #050505;
 }
 
 .footer strong,
@@ -959,8 +949,6 @@ li::marker {
   border-radius: 50%;
   background: #a64855;
   border: 2px solid rgba(7, 7, 7, 0.32);
-  box-shadow: 0 0 0 rgba(227, 6, 19, 0.5);
-  animation: pulse 1.8s infinite;
 }
 
 .float-whatsapp:hover,
@@ -984,15 +972,6 @@ li::marker {
   to {
     opacity: 0;
     transform: translate(-50%, -50%) scale(18);
-  }
-}
-
-@keyframes pulse {
-  70% {
-    box-shadow: 0 0 0 14px rgba(227, 6, 19, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(227, 6, 19, 0);
   }
 }
 
