@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#080808"/>
+  <path d="M12 22h24l-4 20H8l4-20Z" fill="#111" stroke="#fff" stroke-width="3"/>
+  <path d="M34 18h20l-5 28H29l5-28Z" fill="#e50914"/>
+  <text x="16" y="39" font-family="Arial Black, Arial, sans-serif" font-size="20" font-weight="900" fill="#fff">G</text>
+  <text x="35" y="39" font-family="Arial Black, Arial, sans-serif" font-size="20" font-weight="900" fill="#fff">R</text>
+</svg>
