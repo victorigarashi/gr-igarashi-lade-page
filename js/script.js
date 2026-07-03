@@ -1,4 +1,4 @@
-const whatsappUrl = "https://wa.me/554399315130?text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento.";
+const whatsappNumber = "554399315130";
 
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector(".nav-toggle");
@@ -8,8 +8,74 @@ const whatsappLinks = document.querySelectorAll("[data-whatsapp]");
 const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
 
+const buildWhatsappUrl = (message) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+const getPreviousPartsHeading = (element) => {
+  let current = element.previousElementSibling;
+
+  while (current) {
+    if (current.classList?.contains("parts-head")) {
+      return current.querySelector("h4")?.textContent.trim();
+    }
+
+    current = current.previousElementSibling;
+  }
+
+  return "";
+};
+
+const getWhatsappMessage = (link) => {
+  const partCard = link.closest(".part-card");
+
+  if (partCard) {
+    const partName = partCard.querySelector("h5")?.textContent.trim();
+    const category = partCard.querySelector("span")?.textContent.trim();
+    const lineName = getPreviousPartsHeading(partCard.parentElement).replace("Peças disponíveis — ", "");
+
+    return `Olá, gostaria de um orçamento para ${partName}${category ? ` (${category})` : ""}${lineName ? ` da ${lineName}` : ""}.`;
+  }
+
+  const partsHead = link.closest(".parts-head");
+
+  if (partsHead) {
+    const catalogName = partsHead.querySelector("h4")?.textContent.trim().replace("Peças disponíveis — ", "");
+    return `Olá, gostaria de ver o catálogo completo${catalogName ? ` da ${catalogName}` : ""}.`;
+  }
+
+  const lineContent = link.closest(".line-content");
+
+  if (lineContent) {
+    const lineName = lineContent.querySelector("h3")?.textContent.trim();
+    return `Olá, gostaria de um orçamento para peças e serviços da ${lineName}.`;
+  }
+
+  if (link.closest(".hero")) {
+    return link.classList.contains("btn-red")
+      ? "Olá, gostaria de solicitar um orçamento com a GR Igarashi."
+      : "Olá, gostaria de falar com a GR Igarashi sobre peças automotivas.";
+  }
+
+  if (link.closest(".cta")) {
+    return "Olá, não encontrei a peça que preciso no site. Pode me ajudar a localizar?";
+  }
+
+  if (link.closest(".footer")) {
+    return "Olá, vim pelo site da GR Igarashi e gostaria de atendimento pelo WhatsApp.";
+  }
+
+  if (link.classList.contains("float-whatsapp")) {
+    return "Olá, vim pelo site da GR Igarashi e gostaria de atendimento rápido.";
+  }
+
+  if (link.classList.contains("header-whatsapp")) {
+    return "Olá, vim pelo site da GR Igarashi e gostaria de falar com um atendente.";
+  }
+
+  return "Olá, gostaria de um orçamento.";
+};
+
 whatsappLinks.forEach((link) => {
-  link.href = whatsappUrl;
+  link.href = buildWhatsappUrl(getWhatsappMessage(link));
   link.target = "_blank";
   link.rel = "noopener noreferrer";
 });
