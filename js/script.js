@@ -25,6 +25,8 @@ const getPreviousPartsHeading = (element) => {
 };
 
 const getWhatsappMessage = (link) => {
+  if (link.dataset.message) return link.dataset.message;
+
   const partCard = link.closest(".part-card");
 
   if (partCard) {
